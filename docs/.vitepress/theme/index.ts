@@ -1,5 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import { getScrollOffset } from "vitepress";
+import type { Zoom as fangdashili } from "medium-zoom";
 import "./custom.css";
 
 type shitu_guodu = {
@@ -15,6 +16,8 @@ const mulugundongshichang = 900;
 const mulubiaojizuixiaoshichang = 260;
 const mulubiaojizuidashichang = 820;
 const shoujimulugengxinjiange = 120;
+let tupianfangdashili: fangdashili | undefined;
+let tupianfangdazhunbei: Promise<fangdashili> | undefined;
 
 function qidongzhutiguodu() {
   if (typeof window === "undefined") {
@@ -408,6 +411,71 @@ function qidongshoujimuluzhuangtai() {
   anpaigengxin();
 }
 
+function qidongtupianfangda() {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  const chuangkou = window as Window & {
+    __breezell_tupianfangda_yichushihua__?: boolean;
+  };
+
+  if (chuangkou.__breezell_tupianfangda_yichushihua__) {
+    return;
+  }
+
+  chuangkou.__breezell_tupianfangda_yichushihua__ = true;
+
+  let donghuazhen = 0;
+
+  const zhunbeifangda = async () => {
+    if (tupianfangdashili) {
+      return tupianfangdashili;
+    }
+
+    if (!tupianfangdazhunbei) {
+      tupianfangdazhunbei = import("medium-zoom").then(({ default: fangda }) => {
+        tupianfangdashili = fangda({
+          background: "rgba(10, 10, 10, 0.82)",
+          margin: 28,
+          scrollOffset: 32,
+        });
+
+        return tupianfangdashili;
+      });
+    }
+
+    return tupianfangdazhunbei;
+  };
+
+  const gengxin = async () => {
+    const fangda = await zhunbeifangda();
+    const tupianliebiao = Array.from(
+      document.querySelectorAll<HTMLImageElement>(".vp-doc :where(p, figure) > img")
+    ).filter((tupian) => !tupian.closest("a"));
+
+    fangda.detach(...fangda.getImages());
+
+    if (tupianliebiao.length) {
+      fangda.attach(tupianliebiao);
+    }
+  };
+
+  const anpaigengxin = () => {
+    window.cancelAnimationFrame(donghuazhen);
+    donghuazhen = window.requestAnimationFrame(() => {
+      void gengxin();
+    });
+  };
+
+  new MutationObserver(anpaigengxin).observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+
+  anpaigengxin();
+}
+
 export default {
   ...DefaultTheme,
   enhanceApp(shangxiawen: unknown) {
@@ -416,5 +484,6 @@ export default {
     qidongsousuoxiaoguo();
     qidongmulugundong();
     qidongshoujimuluzhuangtai();
+    qidongtupianfangda();
   },
 };
