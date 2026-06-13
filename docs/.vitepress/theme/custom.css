@@ -32,6 +32,19 @@ select,
   -webkit-tap-highlight-color: transparent;
 }
 
+html,
+body,
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 /* Custom Stlye */
 .custom-layout {
   background-color: var(--vp-c-bg-soft);
