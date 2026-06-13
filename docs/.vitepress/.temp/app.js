@@ -30,7 +30,7 @@ _sfc_main$13.setup = (props, ctx) => {
 function deserializeFunctions(r) {
   return Array.isArray(r) ? r.map(deserializeFunctions) : typeof r == "object" && r !== null ? Object.keys(r).reduce((t, n) => (t[n] = deserializeFunctions(r[n]), t), {}) : typeof r == "string" && r.startsWith("_vp-fn_") ? new Function(`return ${r.slice(7)}`)() : r;
 }
-const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"Breezell-Doc","description":"An awesome docs template built by me","base":"/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{"logo":"/logo-touming-caibian.png","siteTitle":"reezell-Doc","search":{"provider":"local"},"nav":[{"text":"About","link":"/about"},{"text":"Contact","link":"/contact"},{"text":"Guide","link":"/guide"},{"text":"Configs","link":"/configs"},{"text":"Changelog","link":"/changelog"}],"socialLinks":[{"icon":"discord","link":"https://discord.gg/gRBk8rDsc"},{"icon":"x","link":"https://x.com/BreezellCode"},{"icon":{"svg":"<svg role=\\"img\\" viewBox=\\"0 0 24 24\\"><path d=\\"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 9h-3.02a15.43 15.43 0 0 0-1.08-5.02A8.03 8.03 0 0 1 18.93 11ZM12 4.04c.74 1.06 1.58 3.05 1.88 6.96h-3.76c.3-3.91 1.14-5.9 1.88-6.96ZM4.26 13h3.82c.12 1.88.45 3.56.94 4.93A8.03 8.03 0 0 1 4.26 13Zm3.82-2H4.26a8.03 8.03 0 0 1 4.76-4.93A15.6 15.6 0 0 0 8.08 11ZM12 19.96c-.74-1.06-1.58-3.05-1.88-6.96h3.76c-.3 3.91-1.14 5.9-1.88 6.96Zm2.83-2.03c.49-1.37.82-3.05.94-4.93h3.82a8.03 8.03 0 0 1-4.76 4.93Z\\"/></svg>"},"link":"https://breezell.com","ariaLabel":"官网"}],"sidebar":[{"text":"Get Started","items":[{"text":"Introduction","link":"/introduction"},{"text":"Language Settings","link":"/settings-page-language-settings"}]}],"docFooter":{"prev":true,"next":true},"editLink":{"pattern":"https://github.com/Evavic44/adocs/edit/main/docs/:path","text":"Edit this page on GitHub"},"markdown":{"theme":"material-palenight","lineNumbers":true},"returnToTopLabel":"Go to Top","sidebarMenuLabel":"Menu"},"locales":{},"scrollOffset":134,"cleanUrls":true}'));
+const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"Breezell-Doc","description":"An awesome docs template built by me","base":"/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{"logo":"/logo-touming-caibian.png","siteTitle":"reezell-Doc","search":{"provider":"local"},"nav":[{"text":"About","link":"/about"},{"text":"Contact","link":"/contact"},{"text":"Guide","link":"/guide"},{"text":"Configs","link":"/configs"},{"text":"Changelog","link":"/changelog"}],"socialLinks":[{"icon":"discord","link":"https://discord.gg/gRBk8rDsc"},{"icon":"x","link":"https://x.com/BreezellCode"},{"icon":{"svg":"<svg role=\\"img\\" viewBox=\\"0 0 24 24\\"><path d=\\"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 9h-3.02a15.43 15.43 0 0 0-1.08-5.02A8.03 8.03 0 0 1 18.93 11ZM12 4.04c.74 1.06 1.58 3.05 1.88 6.96h-3.76c.3-3.91 1.14-5.9 1.88-6.96ZM4.26 13h3.82c.12 1.88.45 3.56.94 4.93A8.03 8.03 0 0 1 4.26 13Zm3.82-2H4.26a8.03 8.03 0 0 1 4.76-4.93A15.6 15.6 0 0 0 8.08 11ZM12 19.96c-.74-1.06-1.58-3.05-1.88-6.96h3.76c-.3 3.91-1.14 5.9-1.88 6.96Zm2.83-2.03c.49-1.37.82-3.05.94-4.93h3.82a8.03 8.03 0 0 1-4.76 4.93Z\\"/></svg>"},"link":"https://breezell.com","ariaLabel":"Official website"}],"sidebar":[{"text":"Get Started","items":[{"text":"Introduction","link":"/introduction"},{"text":"Language Settings","link":"/settings-page-language-settings"}]}],"docFooter":{"prev":true,"next":true},"editLink":{"pattern":"https://github.com/Evavic44/adocs/edit/main/docs/:path","text":"Edit this page on GitHub"},"markdown":{"theme":"material-palenight","lineNumbers":true},"returnToTopLabel":"Go to Top","sidebarMenuLabel":"Menu"},"locales":{},"scrollOffset":134,"cleanUrls":true}'));
 var define_import_meta_env_default = { BASE_URL: "/", MODE: "production", DEV: false, PROD: true, SSR: true };
 const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i;
 const APPEARANCE_KEY = "vitepress-theme-appearance";
@@ -3038,7 +3038,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "VPNavBarSearch",
   __ssrInlineRender: true,
   setup(__props) {
-    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.B8uOEEyb.js"));
+    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.DXKAhDY1.js"));
     const VPAlgoliaSearchBox = () => null;
     const { theme: theme2 } = useData();
     const loaded = ref(false);
@@ -4710,13 +4710,13 @@ const theme = {
     app.component("Badge", _sfc_main$13);
   }
 };
-const sousuodonghuashichang = 240;
 const mulugundongshichang = 900;
 const mulubiaojizuixiaoshichang = 260;
 const mulubiaojizuidashichang = 820;
 const shoujimulugengxinjiange = 120;
-let tupianfangdashili;
-let tupianfangdazhunbei;
+let tupiankanqishili;
+let tupiankanqizhunbei;
+let tupiankanqirongqi;
 function qidongzhutiguodu() {
   if (typeof window === "undefined") {
     return;
@@ -4797,77 +4797,21 @@ function qidongsousuoxiaoguo() {
     return;
   }
   chuangkou.__breezell_sousuoxiaoguo_yichushihua__ = true;
-  let shifoufangxinguanbi = false;
-  let dingshiqi;
   const gengxinzhuangtai = () => {
     const sousuokuang = document.querySelector(".VPLocalSearchBox");
     document.body.classList.toggle("sousuokaiqi", Boolean(sousuokuang));
   };
-  const yanxiguanbi = (sousuokuang, chufa) => {
-    if (shifoufangxinguanbi || sousuokuang.classList.contains("sousuoguanbizhong")) {
-      return;
-    }
-    sousuokuang.classList.add("sousuoguanbizhong");
-    window.clearTimeout(dingshiqi);
-    dingshiqi = window.setTimeout(() => {
-      shifoufangxinguanbi = true;
-      chufa();
-      window.setTimeout(() => {
-        shifoufangxinguanbi = false;
-        gengxinzhuangtai();
-      }, 0);
-    }, sousuodonghuashichang);
-  };
-  const guanbibiaoqian = ".backdrop, .back-button, .result";
-  document.addEventListener(
-    "click",
-    (shijian) => {
-      const mubiao = shijian.target;
-      if (!(mubiao instanceof Element)) {
-        return;
-      }
-      if (mubiao.closest(".DocSearch-Button")) {
-        window.requestAnimationFrame(gengxinzhuangtai);
-        window.setTimeout(gengxinzhuangtai, 0);
-        return;
-      }
-      const sousuokuang = mubiao.closest(".VPLocalSearchBox");
-      const guanbiyuansu = mubiao.closest(guanbibiaoqian);
-      if (!sousuokuang || !guanbiyuansu || shifoufangxinguanbi) {
-        return;
-      }
-      shijian.preventDefault();
-      shijian.stopImmediatePropagation();
-      yanxiguanbi(sousuokuang, () => {
-        guanbiyuansu.click();
-      });
-    },
-    true
-  );
-  document.addEventListener(
-    "keydown",
-    (shijian) => {
-      const sousuokuang = document.querySelector(".VPLocalSearchBox");
-      if (!sousuokuang || shijian.key !== "Escape" || shifoufangxinguanbi) {
-        return;
-      }
-      shijian.preventDefault();
-      shijian.stopImmediatePropagation();
-      yanxiguanbi(sousuokuang, () => {
-        window.dispatchEvent(
-          new KeyboardEvent("keydown", {
-            key: "Escape",
-            bubbles: true,
-            cancelable: true
-          })
-        );
-      });
-    },
-    true
-  );
   new MutationObserver(gengxinzhuangtai).observe(document.body, {
-    childList: true
+    childList: true,
+    subtree: true
   });
+  document.addEventListener("click", () => {
+    window.requestAnimationFrame(gengxinzhuangtai);
+  });
+  document.addEventListener("keydown", () => {
+    window.requestAnimationFrame(gengxinzhuangtai);
+  });
+  gengxinzhuangtai();
 }
 function qidongmulugundong() {
   if (typeof window === "undefined") {
@@ -5011,41 +4955,91 @@ function qidongshoujimuluzhuangtai() {
   });
   anpaigengxin();
 }
-function qidongtupianfangda() {
+function qidongtupiankanqi() {
   if (typeof window === "undefined") {
     return;
   }
   const chuangkou = window;
-  if (chuangkou.__breezell_tupianfangda_yichushihua__) {
+  if (chuangkou.__breezell_tupiankanqi_yichushihua__) {
     return;
   }
-  chuangkou.__breezell_tupianfangda_yichushihua__ = true;
+  chuangkou.__breezell_tupiankanqi_yichushihua__ = true;
   let donghuazhen = 0;
-  const zhunbeifangda = async () => {
-    if (tupianfangdashili) {
-      return tupianfangdashili;
+  let jiantingshili;
+  const zhunbeikanqilei = async () => {
+    if (!tupiankanqizhunbei) {
+      tupiankanqizhunbei = import("viewerjs");
     }
-    if (!tupianfangdazhunbei) {
-      tupianfangdazhunbei = import("medium-zoom").then(({ default: fangda }) => {
-        tupianfangdashili = fangda({
-          background: "rgba(10, 10, 10, 0.82)",
-          margin: 28,
-          scrollOffset: 32
-        });
-        return tupianfangdashili;
-      });
-    }
-    return tupianfangdazhunbei;
+    return tupiankanqizhunbei;
+  };
+  const keyongtupian = (tupian) => Boolean(tupian.closest(".vp-doc")) && !tupian.closest("a") && !tupian.closest(".viewer-canvas, .viewer-navbar") && Boolean(tupian.currentSrc || tupian.src);
+  const chuangjiankanqi = async (rongqi) => {
+    const { default: kanqilei } = await zhunbeikanqilei();
+    tupiankanqishili == null ? void 0 : tupiankanqishili.destroy();
+    tupiankanqirongqi = rongqi;
+    tupiankanqishili = new kanqilei(rongqi, {
+      backdrop: true,
+      button: true,
+      className: "breezell-tupiankanqi",
+      focus: true,
+      initialCoverage: window.innerWidth < 768 ? 0.96 : 0.9,
+      keyboard: true,
+      loading: true,
+      loop: true,
+      maxZoomRatio: 6,
+      minZoomRatio: 0.2,
+      movable: true,
+      navbar: 0,
+      title: [
+        2,
+        (tupian) => tupian.alt || "Image preview"
+      ],
+      toolbar: {
+        zoomIn: 1,
+        zoomOut: 1,
+        oneToOne: 2,
+        reset: 1,
+        prev: 4,
+        next: 4,
+        rotateLeft: 4,
+        rotateRight: 4,
+        flipHorizontal: 4,
+        flipVertical: 4
+      },
+      tooltip: true,
+      transition: true,
+      zoomOnTouch: true,
+      zoomOnWheel: true,
+      zoomRatio: window.innerWidth < 768 ? 0.18 : 0.12,
+      zoomable: true,
+      toggleOnDblclick: true,
+      filter(tupian) {
+        return keyongtupian(tupian);
+      }
+    });
   };
   const gengxin = async () => {
-    const fangda = await zhunbeifangda();
-    const tupianliebiao = Array.from(
-      document.querySelectorAll(".vp-doc :where(p, figure) > img")
-    ).filter((tupian) => !tupian.closest("a"));
-    fangda.detach(...fangda.getImages());
-    if (tupianliebiao.length) {
-      fangda.attach(tupianliebiao);
+    const rongqi = document.querySelector(".VPContent");
+    if (!rongqi) {
+      tupiankanqishili == null ? void 0 : tupiankanqishili.destroy();
+      tupiankanqishili = void 0;
+      tupiankanqirongqi = void 0;
+      return;
     }
+    const tupianliebiao = Array.from(rongqi.querySelectorAll("img")).filter(
+      keyongtupian
+    );
+    if (!tupianliebiao.length) {
+      tupiankanqishili == null ? void 0 : tupiankanqishili.destroy();
+      tupiankanqishili = void 0;
+      tupiankanqirongqi = rongqi;
+      return;
+    }
+    if (!tupiankanqishili || tupiankanqirongqi !== rongqi) {
+      await chuangjiankanqi(rongqi);
+      return;
+    }
+    tupiankanqishili.update();
   };
   const anpaigengxin = () => {
     window.cancelAnimationFrame(donghuazhen);
@@ -5061,7 +5055,9 @@ function qidongtupianfangda() {
       window.setTimeout(jiantingneirong, 50);
       return;
     }
-    new MutationObserver(anpaigengxin).observe(rongqi || document.body, {
+    jiantingshili == null ? void 0 : jiantingshili.disconnect();
+    jiantingshili = new MutationObserver(anpaigengxin);
+    jiantingshili.observe(rongqi || document.body, {
       childList: true,
       subtree: true
     });
@@ -5078,7 +5074,7 @@ const RawTheme = {
     qidongsousuoxiaoguo();
     qidongmulugundong();
     qidongshoujimuluzhuangtai();
-    qidongtupianfangda();
+    qidongtupiankanqi();
   }
 };
 const ClientOnly = defineComponent({
