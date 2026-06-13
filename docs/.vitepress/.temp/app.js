@@ -3038,7 +3038,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "VPNavBarSearch",
   __ssrInlineRender: true,
   setup(__props) {
-    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.B8uOEEyb.js"));
+    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.BLYQSlkg.js"));
     const VPAlgoliaSearchBox = () => null;
     const { theme: theme2 } = useData();
     const loaded = ref(false);
@@ -4715,6 +4715,8 @@ const mulugundongshichang = 900;
 const mulubiaojizuixiaoshichang = 260;
 const mulubiaojizuidashichang = 820;
 const shoujimulugengxinjiange = 120;
+let tupianfangdashili;
+let tupianfangdazhunbei;
 function qidongzhutiguodu() {
   if (typeof window === "undefined") {
     return;
@@ -5009,6 +5011,54 @@ function qidongshoujimuluzhuangtai() {
   });
   anpaigengxin();
 }
+function qidongtupianfangda() {
+  if (typeof window === "undefined") {
+    return;
+  }
+  const chuangkou = window;
+  if (chuangkou.__breezell_tupianfangda_yichushihua__) {
+    return;
+  }
+  chuangkou.__breezell_tupianfangda_yichushihua__ = true;
+  let donghuazhen = 0;
+  const zhunbeifangda = async () => {
+    if (tupianfangdashili) {
+      return tupianfangdashili;
+    }
+    if (!tupianfangdazhunbei) {
+      tupianfangdazhunbei = import("medium-zoom").then(({ default: fangda }) => {
+        tupianfangdashili = fangda({
+          background: "rgba(10, 10, 10, 0.82)",
+          margin: 28,
+          scrollOffset: 32
+        });
+        return tupianfangdashili;
+      });
+    }
+    return tupianfangdazhunbei;
+  };
+  const gengxin = async () => {
+    const fangda = await zhunbeifangda();
+    const tupianliebiao = Array.from(
+      document.querySelectorAll(".vp-doc :where(p, figure) > img")
+    ).filter((tupian) => !tupian.closest("a"));
+    fangda.detach(...fangda.getImages());
+    if (tupianliebiao.length) {
+      fangda.attach(tupianliebiao);
+    }
+  };
+  const anpaigengxin = () => {
+    window.cancelAnimationFrame(donghuazhen);
+    donghuazhen = window.requestAnimationFrame(() => {
+      void gengxin();
+    });
+  };
+  new MutationObserver(anpaigengxin).observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+  anpaigengxin();
+}
 const RawTheme = {
   ...theme,
   enhanceApp(shangxiawen) {
@@ -5018,6 +5068,7 @@ const RawTheme = {
     qidongsousuoxiaoguo();
     qidongmulugundong();
     qidongshoujimuluzhuangtai();
+    qidongtupianfangda();
   }
 };
 const ClientOnly = defineComponent({

@@ -25,11 +25,11 @@ Click the settings icon to open the settings menu.
 
 At the top of this menu, you will see an option named **Breezell Settings**. Click **Breezell Settings**.
 
-![Breezell settings menu with Breezell Settings selected](/language-settings/settings-menu.png)
+![Breezell settings menu with Breezell Settings selected](/language-settings/settings-menu-current.png)
 
 After clicking it, a new tab named **Breezell Settings** will open.
 
-![Breezell Settings page](/language-settings/general-settings-page-updated.png)
+![Breezell Settings page](/language-settings/breezell-settings-current.png)
 
 ## Find the language setting
 
@@ -51,7 +51,7 @@ After entering the **General** page, you will see the language setting near the 
 
 The language option is shown as a dropdown selector. By default, it may display **English**.
 
-![Language dropdown on the General settings page](/language-settings/language-setting-dropdown.png)
+![Language dropdown on the General settings page](/language-settings/language-dropdown-current.png)
 
 Click the dropdown and select the language you want to use.
 
