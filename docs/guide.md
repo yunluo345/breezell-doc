@@ -161,7 +161,7 @@ Customizing the `Navbar` is a pretty straightforward process as well. Inside you
     { text: "Contact", link: "/contact" },
     { text: "Guide", link: "/guide" },
     { text: "Configs", link: "/configs" },
-    { text: "Changelog", link: "https://github.com/Evavic44" },
+    { text: "Changelog", link: "/changelog" },
   ],
   // ...
 }
@@ -173,21 +173,14 @@ Essentially navigating to `http://localhost:5173/about` should take you to an ab
 
 ![navbar](https://user-images.githubusercontent.com/62628408/201539594-8e8f1d80-19dc-4335-b82b-fee5a23a5d30.png)
 
-Navigation links can also be dropdown menus too. To add one, simply replace any of the links property with the items object which contains an array of links.
+You can also keep changelog as a dedicated page instead of a dropdown when all release notes live in one place.
 
 ```js
-// .vitepress/config.js
-{
-  text: "Changelog",
-  items: [
-   { text: "v0.0.1", link: "/item-1" },
-   { text: "v0.0.2", link: "/item-2" },
-   { text: "v0.0.3", link: "/item-3" },
-  ],
-},
+// .vitepress/config.ts
+{ text: "Changelog", link: "/changelog" }
 ```
 
-Now changelog will become a dropdown menu with the respective links you pass inside.
+This setup is what Breezell-Doc uses now, so visitors can always open the latest release notes from a single stable route.
 
 ### Output
 
