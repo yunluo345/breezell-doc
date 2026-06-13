@@ -44,7 +44,7 @@ export default {
     ],
     // you can disable the previous and next page here
     docFooter: {
-      prev: false,
+      prev: true,
       next: true,
     },
     editLink: {
