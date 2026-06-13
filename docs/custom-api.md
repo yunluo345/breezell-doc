@@ -366,7 +366,9 @@ Breezell will try to request the provider and load the available model list.
 
 If the request succeeds, the available models will appear in the model selection list.
 
-![Fetch Available Models button in the Models panel](/custom-api/fetch-available-models-masked.png)
+![Fetch Available Models button with available models loaded in the selection list](/custom-api/fetch-available-models-current.png)
+
+After you confirm that the provider settings are correct, you can click this button to fetch and select your own models.
 
 You can then select the models you want to use and click **Add 1 Model**.
 
@@ -378,9 +380,9 @@ gpt-5.5
 
 Then click **Add 1 Model** to add it to the current custom API provider.
 
-If the model list is still empty after you have configured the Base URL, API key, protocol, and endpoint preset, you can restart Breezell and try again.
+If the left area is still empty at this step, restart Breezell and try again.
 
-![Available model list after a successful fetch](/custom-api/fetch-results-masked.png)
+![Left area still empty after fetching available models](/custom-api/fetch-results-empty.png)
 
 You can also use **Check All** to test whether the gateway connection is healthy after configuring the provider and trying to load models.
 
