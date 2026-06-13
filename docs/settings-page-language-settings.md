@@ -29,7 +29,7 @@ At the top of this menu, you will see an option named **Breezell Settings**. Cli
 
 After clicking it, a new tab named **Breezell Settings** will open.
 
-![Breezell Settings page](/language-settings/general-settings-page.png)
+![Breezell Settings page](/language-settings/general-settings-page-updated.png)
 
 ## Find the language setting
 
