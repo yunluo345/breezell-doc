@@ -39,6 +39,7 @@ export default {
         items: [
           { text: "Introduction", link: "/introduction" },
           { text: "Language Settings", link: "/settings-page-language-settings" },
+          { text: "Custom API", link: "/custom-api" },
         ],
       },
     ],
