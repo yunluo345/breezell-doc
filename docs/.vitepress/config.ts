@@ -1,5 +1,5 @@
 export default {
-  title: "Adocs",
+  title: "Breezell-Doc",
   description: "An awesome docs template built by me",
   lang: 'en-US',
   cleanUrls: true,
@@ -7,8 +7,8 @@ export default {
   ignoreDeadLinks: true,
   
   themeConfig: {
-    logo: "/logo.svg",
-    siteTitle: "Adocs",
+    logo: "/logo-touming-caibian.png",
+    siteTitle: "reezell-Doc",
     search: {
       provider: "local",
     },
@@ -18,52 +18,27 @@ export default {
       { text: "Contact", link: "/contact" },
       { text: "Guide", link: "/guide" },
       { text: "Configs", link: "/configs" },
-      {
-        // Dropdown Menu
-        text: "Changelog",
-        items: [
-          { text: "v0.0.1", link: "/item-1" },
-          { text: "v0.0.2", link: "/item-2" },
-          { text: "v0.0.3", link: "/item-3" },
-        ],
-      },
+      { text: "Changelog", link: "/changelog" },
     ],
     // Social Icons
     socialLinks: [
-      { icon: "github", link: "https://github.com/Evavic44/adocs" },
-      { icon: "twitter", link: "https://twitter.com/victorekea" },
-      { icon: "discord", link: "..." },
+      { icon: "discord", link: "https://discord.gg/gRBk8rDsc" },
+      { icon: "x", link: "https://x.com/BreezellCode" },
       {
         icon: {
-          svg: '<svg role="img" width="26.01" height="32" viewBox="0 0 256 315"><path d="M213.803 167.03c.442 47.58 41.74 63.413 42.197 63.615c-.35 1.116-6.599 22.563-21.757 44.716c-13.104 19.153-26.705 38.235-48.13 38.63c-21.05.388-27.82-12.483-51.888-12.483c-24.061 0-31.582 12.088-51.51 12.871c-20.68.783-36.428-20.71-49.64-39.793c-27-39.033-47.633-110.3-19.928-158.406c13.763-23.89 38.36-39.017 65.056-39.405c20.307-.387 39.475 13.662 51.889 13.662c12.406 0 35.699-16.895 60.186-14.414c10.25.427 39.026 4.14 57.503 31.186c-1.49.923-34.335 20.044-33.978 59.822M174.24 50.199c10.98-13.29 18.369-31.79 16.353-50.199c-15.826.636-34.962 10.546-46.314 23.828c-10.173 11.763-19.082 30.589-16.678 48.633c17.64 1.365 35.66-8.964 46.64-22.262"/></svg>',
+          svg: '<svg role="img" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 9h-3.02a15.43 15.43 0 0 0-1.08-5.02A8.03 8.03 0 0 1 18.93 11ZM12 4.04c.74 1.06 1.58 3.05 1.88 6.96h-3.76c.3-3.91 1.14-5.9 1.88-6.96ZM4.26 13h3.82c.12 1.88.45 3.56.94 4.93A8.03 8.03 0 0 1 4.26 13Zm3.82-2H4.26a8.03 8.03 0 0 1 4.76-4.93A15.6 15.6 0 0 0 8.08 11ZM12 19.96c-.74-1.06-1.58-3.05-1.88-6.96h3.76c-.3 3.91-1.14 5.9-1.88 6.96Zm2.83-2.03c.49-1.37.82-3.05.94-4.93h3.82a8.03 8.03 0 0 1-4.76 4.93Z"/></svg>',
         },
-        link: "https://google.com",
+        link: "https://breezell.com",
+        ariaLabel: "官网",
       },
     ],
     // Sidebar
     sidebar: [
       {
-        text: "Section A",
-        collapsible: true,
+        text: "Get Started",
         items: [
           { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-      {
-        text: "Section B",
-        collapsible: false,
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-      {
-        text: "Section C",
-        collapsible: true,
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
+          { text: "Language Settings", link: "/settings-page-language-settings" },
         ],
       },
     ],
@@ -75,10 +50,6 @@ export default {
     editLink: {
       pattern: 'https://github.com/Evavic44/adocs/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
-    },
-    footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2024-present Adocs",
     },
     markdown: {
       theme: "material-palenight",
