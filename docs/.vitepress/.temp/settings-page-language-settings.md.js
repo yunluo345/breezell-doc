@@ -2,7 +2,7 @@ import { ssrRenderAttrs, ssrRenderAttr } from "vue/server-renderer";
 import { useSSRContext } from "vue";
 import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
 const _imports_0 = "/language-settings/settings-menu.png";
-const _imports_1 = "/language-settings/breezell-settings-page.png";
+const _imports_1 = "/language-settings/general-settings-page.png";
 const _imports_2 = "/language-settings/language-setting-dropdown.png";
 const __pageData = JSON.parse('{"title":"Language Settings","description":"Learn how to change the Breezell interface language from the settings page.","frontmatter":{"title":"Language Settings","description":"Learn how to change the Breezell interface language from the settings page."},"headers":[],"relativePath":"settings-page-language-settings.md","filePath":"settings-page-language-settings.md"}');
 const _sfc_main = { name: "settings-page-language-settings.md" };
