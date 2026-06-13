@@ -3038,7 +3038,7 @@ const _sfc_main$r = /* @__PURE__ */ defineComponent({
   __name: "VPNavBarSearch",
   __ssrInlineRender: true,
   setup(__props) {
-    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.BLYQSlkg.js"));
+    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.B8uOEEyb.js"));
     const VPAlgoliaSearchBox = () => null;
     const { theme: theme2 } = useData();
     const loaded = ref(false);
@@ -5053,11 +5053,21 @@ function qidongtupianfangda() {
       void gengxin();
     });
   };
-  new MutationObserver(anpaigengxin).observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-  anpaigengxin();
+  let changshicishu = 0;
+  const jiantingneirong = () => {
+    const rongqi = document.querySelector(".VPContent");
+    if (!rongqi && changshicishu < 30) {
+      changshicishu += 1;
+      window.setTimeout(jiantingneirong, 50);
+      return;
+    }
+    new MutationObserver(anpaigengxin).observe(rongqi || document.body, {
+      childList: true,
+      subtree: true
+    });
+    anpaigengxin();
+  };
+  jiantingneirong();
 }
 const RawTheme = {
   ...theme,

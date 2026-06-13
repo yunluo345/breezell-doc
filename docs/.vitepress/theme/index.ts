@@ -468,12 +468,25 @@ function qidongtupianfangda() {
     });
   };
 
-  new MutationObserver(anpaigengxin).observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+  let changshicishu = 0;
+  const jiantingneirong = () => {
+    const rongqi = document.querySelector(".VPContent");
 
-  anpaigengxin();
+    if (!rongqi && changshicishu < 30) {
+      changshicishu += 1;
+      window.setTimeout(jiantingneirong, 50);
+      return;
+    }
+
+    new MutationObserver(anpaigengxin).observe(rongqi || document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    anpaigengxin();
+  };
+
+  jiantingneirong();
 }
 
 export default {
