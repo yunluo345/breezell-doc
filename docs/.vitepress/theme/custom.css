@@ -21,6 +21,17 @@
     monospace;
 }
 
+html,
+body,
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Custom Stlye */
 .custom-layout {
   background-color: var(--vp-c-bg-soft);
@@ -137,18 +148,114 @@ html.mulugundongzhong {
   transform: translateY(-1px);
 }
 
-.medium-zoom-overlay {
+.viewer-container {
   z-index: 10000;
-  backdrop-filter: blur(8px);
 }
 
-.medium-zoom-image {
-  z-index: 10001;
+.viewer-backdrop {
+  background: rgba(255, 250, 245, 0.92);
 }
 
-.medium-zoom-image--opened {
-  border-radius: 8px;
-  cursor: zoom-out;
+:root.dark .viewer-backdrop {
+  background: rgba(12, 14, 18, 0.9);
+}
+
+.viewer-container,
+.viewer-canvas,
+.viewer-footer,
+.viewer-title,
+.viewer-tooltip,
+.viewer-button,
+.viewer-toolbar > ul > li {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.viewer-canvas img {
+  border-radius: 12px;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.22);
+}
+
+.viewer-title {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #18212f;
+  backdrop-filter: blur(14px);
+}
+
+:root.dark .viewer-title {
+  background: rgba(19, 23, 31, 0.8);
+  color: rgba(244, 247, 251, 0.94);
+}
+
+.viewer-tooltip {
+  background: rgba(18, 23, 31, 0.82);
+}
+
+.viewer-toolbar > ul {
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.16);
+}
+
+:root.dark .viewer-toolbar > ul {
+  background: rgba(20, 24, 31, 0.78);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
+}
+
+.viewer-toolbar > ul > li {
+  margin: 0 0.08rem;
+  border-radius: 999px;
+}
+
+.viewer-button::before,
+.viewer-toolbar > ul > li::before {
+  background-color: currentColor;
+}
+
+.viewer-button {
+  color: #18212f;
+}
+
+:root.dark .viewer-button {
+  color: rgba(244, 247, 251, 0.94);
+}
+
+.viewer-toolbar > ul > li {
+  color: #18212f;
+}
+
+:root.dark .viewer-toolbar > ul > li {
+  color: rgba(244, 247, 251, 0.94);
+}
+
+@media (max-width: 767px) {
+  .vp-doc :where(p, figure) > img {
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+
+  .viewer-canvas img {
+    border-radius: 10px;
+    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.18);
+  }
+
+  .viewer-title {
+    max-width: calc(100vw - 2rem);
+    padding: 0.6rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .viewer-toolbar > ul {
+    padding: 0.2rem;
+  }
+
+  .viewer-toolbar > ul > li {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
 }
 
 .VPLocalSearchBox .backdrop {
