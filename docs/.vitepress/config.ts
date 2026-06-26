@@ -71,7 +71,6 @@ export default defineConfig({
       { text: "About", link: "/about" },
       { text: "Contact", link: "/contact" },
       { text: "Guide", link: "/introduction" },
-      { text: "Configs", link: "/configs" },
       { text: "Changelog", link: "/changelog" },
     ],
     socialLinks: [
@@ -119,28 +118,6 @@ export default defineConfig({
         {
           text: "Contact",
           items: [{ text: "Contact", link: "/contact" }],
-        },
-        {
-          text: "Get Started",
-          items: [
-            { text: "Introduction", link: "/introduction" },
-            { text: "Language Settings", link: "/settings-page-language-settings" },
-            { text: "Custom API", link: "/custom-api" },
-            { text: "Feature Options Overview", link: "/feature-options-overview" },
-          ],
-        },
-        {
-          text: "Advanced Operations",
-          items: [
-            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
-            { text: "Mode Selection", link: "/mode-selection" },
-          ],
-        },
-      ],
-      "/configs": [
-        {
-          text: "Configs",
-          items: [{ text: "Configs", link: "/configs" }],
         },
         {
           text: "Get Started",
