@@ -160,7 +160,6 @@ Customizing the `Navbar` is a pretty straightforward process as well. Inside you
     { text: "About", link: "/about" },
     { text: "Contact", link: "/contact" },
     { text: "Guide", link: "/guide" },
-    { text: "Configs", link: "/configs" },
     { text: "Changelog", link: "/changelog" },
   ],
   // ...
@@ -278,7 +277,6 @@ docs/
 ├── about.md
 ├── contact.md
 ├── guide.md
-├── configs.md
 └── get-started.md
 ```
 
@@ -422,7 +420,6 @@ docs/
 ├── about.md
 ├── contact.md
 ├── guide.md
-├── configs.md
 └── get-started.md
 ```
 
