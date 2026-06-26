@@ -4,12 +4,20 @@ import "viewerjs/dist/viewer.css";
 import type kanqitushili from "viewerjs";
 import "./custom.css";
 
-type shitu_guodu = {
+type shituguodu = {
   ready: Promise<void>;
 };
 
 type keqidongwenjian = Document & {
-  startViewTransition?: (gengxin: () => void) => shitu_guodu;
+  startViewTransition?: (gengxin: () => void) => shituguodu;
+};
+
+type luyou = {
+  onAfterRouteChanged?: (daoda: string) => Promise<void> | void;
+};
+
+type yingyongshangxiawen = {
+  router?: luyou;
 };
 
 const mulugundongshichang = 900;
