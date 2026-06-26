@@ -109,7 +109,10 @@ export default defineConfig({
         },
         {
           text: "Advanced Operations",
-          items: [{ text: "Dialog Box Overview", link: "/dialog-box-overview" }],
+          items: [
+            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
+            { text: "Mode Selection", link: "/mode-selection" },
+          ],
         },
       ],
       "/contact": [
@@ -128,7 +131,10 @@ export default defineConfig({
         },
         {
           text: "Advanced Operations",
-          items: [{ text: "Dialog Box Overview", link: "/dialog-box-overview" }],
+          items: [
+            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
+            { text: "Mode Selection", link: "/mode-selection" },
+          ],
         },
       ],
       "/configs": [
@@ -147,7 +153,10 @@ export default defineConfig({
         },
         {
           text: "Advanced Operations",
-          items: [{ text: "Dialog Box Overview", link: "/dialog-box-overview" }],
+          items: [
+            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
+            { text: "Mode Selection", link: "/mode-selection" },
+          ],
         },
       ],
       "/changelog": [
@@ -166,7 +175,10 @@ export default defineConfig({
         },
         {
           text: "Advanced Operations",
-          items: [{ text: "Dialog Box Overview", link: "/dialog-box-overview" }],
+          items: [
+            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
+            { text: "Mode Selection", link: "/mode-selection" },
+          ],
         },
       ],
       "/": [
@@ -181,7 +193,10 @@ export default defineConfig({
         },
         {
           text: "Advanced Operations",
-          items: [{ text: "Dialog Box Overview", link: "/dialog-box-overview" }],
+          items: [
+            { text: "Dialog Box Overview", link: "/dialog-box-overview" },
+            { text: "Mode Selection", link: "/mode-selection" },
+          ],
         },
       ],
     },

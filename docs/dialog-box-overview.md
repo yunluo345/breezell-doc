@@ -17,53 +17,22 @@ The default input state is the normal starting point for a new message. It keeps
 
 Type your request, choose the mode and model if needed, then send the message to Breezell.
 
-## Mention Menu
+## Mode Selector Menu
 
-The pointer highlights the quick context area used to open the mention menu. The mention menu lets you add files, folders, MCP tools, and skills to the current message.
+The pointer highlights the mode selector menu. This menu lists the available working modes.
 
-![Mention menu in the Breezell dialog box](/dialog-box/mention-menu.png)
+![Mode selector menu](/dialog-box/mode-selector.png)
 
-Use this when your request depends on specific workspace content or an external capability. Adding the right context helps Breezell understand what it should inspect or use before answering.
+Available modes include:
 
-## Context Manual Compression
+- [**Chat**](/mode-selection#chat) for quick questions and answers
+- [**Plan**](/mode-selection#plan) for implementation planning before editing
+- [**Analyze**](/mode-selection#analyze) for read-only investigation
+- [**Entanglement**](/mode-selection#entanglement) for deeper causal reasoning
+- [**Agent**](/mode-selection#agent) for autonomous file edits and tool usage
+- [**Teams**](/mode-selection#teams) for parallel AI teammates on complex tasks
 
-The pointer highlights the **Manual compress** control in the context panel. This action summarizes earlier conversation content so the session can keep useful information while reducing context usage.
-
-![Context panel with manual compression](/dialog-box/context-manual-compress.png)
-
-Manual compression is useful during long conversations, especially when the context window is becoming large but you still want to continue in the same session.
-
-## Context Usage Breakdown
-
-The pointer highlights the context usage indicator. Opening it shows a detailed breakdown of how the current context window is being used.
-
-![Context usage breakdown](/dialog-box/context-usage-breakdown.png)
-
-The breakdown separates usage into categories such as system prompt, tools, rules, memories, skills, MCP, subagents, and conversation content. Use it to understand which parts of the session are consuming the most tokens.
-
-## Slash Command Shortcut
-
-The pointer highlights the slash shortcut near the input area. This shortcut is used to open command-style actions from the dialog box.
-
-![Slash command shortcut](/dialog-box/input-agent-basic.png)
-
-Use it when you want to quickly access available input commands without leaving the current message box.
-
-## Mention Shortcut
-
-The pointer highlights the `@` shortcut. This shortcut opens the mention workflow for adding files, folders, or other supported context sources.
-
-![Mention shortcut](/dialog-box/input-tools-expanded.png)
-
-Use it when you need to attach a specific project file, folder, tool, or skill to the next request.
-
-## Mode Control
-
-The pointer highlights the current working mode control. In this example, the selected mode is **Agent**.
-
-![Mode control](/dialog-box/input-model-controls.png)
-
-Click this control to change how Breezell should handle the next request. The selected mode determines whether Breezell answers directly, plans first, analyzes without editing, or works autonomously with tools.
+For more details, see [Mode Selection](/mode-selection). Choose the mode that matches the amount of autonomy and depth you need.
 
 ## Model Selector
 
@@ -73,27 +42,60 @@ The pointer highlights the model selector. The selector shows the current model 
 
 Use this when you want to choose a model with different speed, reasoning, or capability characteristics.
 
-## Mode Selector Menu
+## File Upload
 
-The pointer highlights the mode selector menu. This menu lists the available working modes.
+The pointer highlights the file upload control.
 
-![Mode selector menu](/dialog-box/mode-selector.png)
+![File upload control](/dialog-box/input-model-controls.png)
 
-Available modes include:
+Click this control to attach local files to the current message before sending it to Breezell. Uploaded files become part of the request context, so Breezell can inspect or reference them while answering.
 
-- **Chat** for quick questions and answers
-- **Plan** for implementation planning before editing
-- **Analyze** for read-only investigation
-- **Entanglement** for deeper causal reasoning
-- **Agent** for autonomous file edits and tool usage
-- **Teams** for parallel AI teammates on complex tasks
+## Advanced Exploration
 
-Choose the mode that matches the amount of autonomy and depth you need.
+The pointer highlights the **Advanced Exploration** control. This feature starts a deeper research workflow for questions that require active learning, broader investigation, and more thorough exploration.
+
+![Advanced Exploration control](/dialog-box/input-tools-expanded.png)
+
+Advanced Exploration means advanced exploration or deep exploration. It works like a scholar that actively learns knowledge, investigates ideas, and explores research questions in depth.
+
+> “A true scholar should actively learn knowledge, explore, and conduct research. It works like a scholar.”
+
+## Breezell Browser
+
+The pointer highlights the **Breezell Browser** control.
+
+![Breezell Browser control](/dialog-box/input-agent-basic.png)
+
+Breezell Browser is Breezell's built-in browser tool. Use it to open webpages, view online content, search for information, and help AI retrieve and analyze web content without leaving the dialog box.
+
+## Context Usage Breakdown
+
+The pointer highlights the context usage indicator. Opening it shows a detailed breakdown of how the current context window is being used.
+
+![Context usage breakdown](/dialog-box/context-usage-breakdown.png)
+
+The breakdown separates usage into categories such as system prompt, tools, rules, memories, skills, MCP, subagents, and conversation content. Use it to understand which parts of the session are consuming the most tokens.
+
+## Context Manual Compression
+
+The pointer highlights the **Manual compress** control in the context panel. This action summarizes earlier conversation content so the session can keep useful information while reducing context usage.
+
+![Context panel with manual compression](/dialog-box/context-manual-compress.png)
+
+Manual compression is useful during long conversations, especially when the context window is becoming large but you still want to continue in the same session.
+
+## Mention Menu
+
+The pointer highlights the quick context area used to open the mention menu. The mention menu lets you add files, folders, MCP tools, and skills to the current message.
+
+![Mention menu in the Breezell dialog box](/dialog-box/mention-menu.png)
+
+Use this when your request depends on specific workspace content or an external capability. Adding the right context helps Breezell understand what it should inspect or use before answering.
 
 ## Usage Tips
 
 - Add file or folder context when the request depends on specific project content.
-- Check context usage during long conversations.
-- Use manual compression when the context window becomes large.
-- Select the mode before sending the message so Breezell handles the task with the right workflow.
+- Agent is the default mode and the recommended automatic workflow for most tasks.
+- Change modes only when you need a specific workflow, such as planning first or analyzing without editing.
+- Context compression runs automatically. Use manual compression only when you prefer strict manual control or have a special requirement.
 - Review the selected model when accuracy, speed, or reasoning depth matters.
