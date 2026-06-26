@@ -62,26 +62,30 @@ onMounted(() => {
 <div class="shouye">
 <section class="yingxiong gundongyujiazai">
 <div class="yingxiongneirong gundongyujiazai">
-<p class="biaoqian">AI development workspace from Switzerland</p>
+<p class="biaoqian">Swiss-built engineering workspace</p>
 <h1>Breezell</h1>
-<h2>Move complex projects from idea to delivery.</h2>
-<p class="miaoshu">Breezell brings chat, agents, analysis, planning, causal reasoning, and team workflows into one code-focused workspace for understanding, editing, and shipping software faster.</p>
+<h2>Turn scattered project context into shippable changes.</h2>
+<p class="miaoshu">Breezell keeps code, decisions, tools, and review loops in one focused workspace, so teams can understand a project, make precise changes, and move from investigation to delivery without switching context.</p>
 <div class="caozuoqu">
 <a class="anniu zhuanniu" href="/guide">Get Started</a>
 <a class="anniu cianniu" href="https://breezell.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
 </div>
 <div class="zhibiaoqu">
-<div><strong>6</strong><span>Dev modes</span></div>
-<div><strong>AI</strong><span>Project context</span></div>
-<div><strong>24/7</strong><span>Always ready</span></div>
+<div><strong>6</strong><span>Work modes</span></div>
+<div><strong>Live</strong><span>Project context</span></div>
+<div><strong>1</strong><span>Workspace</span></div>
 </div>
 </div>
 <div class="yingxiongshijue gundongyujiazai">
 <div class="chanpinchuangkou">
 <div class="chuangkoulan"><span></span><span></span><span></span></div>
-<div class="daimakuai"><b>Agent</b><p>Read context, edit files, run commands, and verify the result before delivery.</p></div>
-<div class="daimakuai qianse"><b>Entanglement</b><p>Connect context, causality, and intent to reason through complex product decisions.</p></div>
-<div class="jincheng"><span></span></div>
+<div class="gongzuobiaoti"><span>Current task</span><b>Refactor payment flow</b></div>
+<div class="renwuliebiao">
+<div><span>01</span><p>Read controllers, services, and schema changes.</p></div>
+<div><span>02</span><p>Patch the smallest safe layer and clean imports.</p></div>
+<div><span>03</span><p>Check diagnostics before handing work back.</p></div>
+</div>
+<div class="zhuangtailan"><span>Context connected</span><b>Agent ready</b></div>
 </div>
 </div>
 </section>
@@ -166,15 +170,19 @@ onMounted(() => {
 .yingxiong {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+  grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
   gap: 52px;
   align-items: center;
   min-height: 560px;
   padding: 68px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 36px;
-  background: var(--vp-c-bg-soft);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
+  border: 1px solid color-mix(in srgb, var(--vp-c-divider), transparent 18%);
+  border-radius: 16px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--vp-c-divider), transparent 72%) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--vp-c-divider), transparent 78%) 1px, transparent 1px),
+    var(--vp-c-bg-soft);
+  background-size: 42px 42px, 42px 42px, auto;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
   overflow: hidden;
 }
 
@@ -190,12 +198,13 @@ onMounted(() => {
   margin: 0 0 18px;
   padding: 8px 14px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  background: var(--vp-c-default-soft);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--vp-c-bg), transparent 8%);
   color: var(--vp-c-brand-1);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .yingxiong h1 {
@@ -205,16 +214,18 @@ onMounted(() => {
   line-height: 0.92;
   font-weight: 900;
   letter-spacing: -0.08em;
+  text-wrap: balance;
 }
 
 .yingxiong h2 {
-  max-width: 650px;
+  max-width: 690px;
   margin: 0 0 22px;
   color: var(--vp-c-text-1);
   font-size: clamp(34px, 4.8vw, 60px);
-  line-height: 1.08;
+  line-height: 1.04;
   font-weight: 900;
   letter-spacing: -0.06em;
+  text-wrap: balance;
 }
 
 .miaoshu {
@@ -240,7 +251,7 @@ onMounted(() => {
   min-width: 132px;
   min-height: 46px;
   padding: 0 24px;
-  border-radius: 999px;
+  border-radius: 16px;
   font-size: 15px;
   font-weight: 900;
   text-decoration: none !important;
@@ -275,7 +286,7 @@ onMounted(() => {
 .zhibiaoqu div {
   padding: 16px 18px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 18px;
+  border-radius: 16px;
   background: var(--vp-c-bg);
 }
 
@@ -301,12 +312,12 @@ onMounted(() => {
 }
 
 .chanpinchuangkou {
-  width: min(100%, 430px);
-  padding: 20px;
+  width: min(100%, 440px);
+  padding: 18px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 28px;
-  background: var(--vp-c-bg);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--vp-c-bg), transparent 2%);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
 }
 
 .chuangkoulan {
@@ -330,45 +341,77 @@ onMounted(() => {
   background: #8ce99a;
 }
 
-.daimakuai {
-  margin-bottom: 14px;
-  padding: 22px;
+.gongzuobiaoti {
+  padding: 18px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 22px;
+  border-radius: 16px;
   background: var(--vp-c-bg-soft);
 }
 
-.daimakuai.qianse {
-  background: var(--vp-c-default-soft);
-}
-
-.daimakuai b {
+.gongzuobiaoti span,
+.zhuangtailan span {
   display: block;
-  margin-bottom: 8px;
-  color: var(--vp-c-text-1);
-  font-size: 20px;
+  margin-bottom: 7px;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-.daimakuai p {
+.gongzuobiaoti b {
+  display: block;
+  color: var(--vp-c-text-1);
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.renwuliebiao {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.renwuliebiao div {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-divider), transparent 20%);
+  border-radius: 16px;
+  background: var(--vp-c-bg);
+}
+
+.renwuliebiao span {
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.renwuliebiao p {
   margin: 0;
   color: var(--vp-c-text-2);
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
-.jincheng {
-  height: 10px;
-  margin-top: 22px;
-  border-radius: 999px;
-  background: var(--vp-c-default-soft);
-  overflow: hidden;
+.zhuangtailan {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--vp-c-brand-1), transparent 91%);
 }
 
-.jincheng span {
-  display: block;
-  width: 68%;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--vp-c-brand-1);
+.zhuangtailan span {
+  margin: 0;
+}
+
+.zhuangtailan b {
+  color: var(--vp-c-text-1);
+  white-space: nowrap;
 }
 
 .moshiqu {

@@ -68,9 +68,9 @@ export default defineConfig({
       label: "On this page",
     },
     nav: [
+      { text: "Guide", link: "/introduction" },
       { text: "About", link: "/about" },
       { text: "Contact", link: "/contact" },
-      { text: "Guide", link: "/introduction" },
       { text: "Changelog", link: "/changelog" },
     ],
     socialLinks: [
