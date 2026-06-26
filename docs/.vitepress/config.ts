@@ -68,7 +68,11 @@ export default defineConfig({
       label: "On this page",
     },
     nav: [
-      { text: "Guide", link: "/introduction" },
+      {
+        text: "Guide",
+        link: "/introduction",
+        activeMatch: "^/(introduction|settings-page-language-settings|custom-api|feature-options-overview|dialog-box-overview|mode-selection)(/|$)",
+      },
       { text: "About", link: "/about" },
       { text: "Contact", link: "/contact" },
       { text: "Changelog", link: "/changelog" },
