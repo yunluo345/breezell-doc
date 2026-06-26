@@ -1,10 +1,35 @@
-export default {
+import { defineConfig } from "vitepress";
+
+export default defineConfig({
   title: "Breezell-Doc",
   description: "An awesome docs template built by me",
-  lang: 'en-US',
+  lang: "en-US",
   cleanUrls: true,
-  // If this is disabled, when building it it will give deadlink errors if your markdown has the wrong links
   ignoreDeadLinks: true,
+  outDir: ".vitepress/dist",
+  vite: {
+    cacheDir: "../node_modules/.vitepress-cache",
+    server: {
+      watch: {
+        ignored: [
+          "**/docs/.vitepress/.temp/**",
+          "**/docs/.vitepress/cache/**",
+          "**/docs/.vitepress/dist/**",
+          "**/node_modules/**",
+          "**/.git/**",
+        ],
+      },
+    },
+    build: {
+      emptyOutDir: true,
+      sourcemap: false,
+      rollupOptions: {
+        treeshake: {
+          moduleSideEffects: false,
+        },
+      },
+    },
+  },
   
   themeConfig: {
     logo: "/logo-touming-caibian.png",
@@ -12,7 +37,6 @@ export default {
     search: {
       provider: "local",
     },
-    // Navbar Link
     nav: [
       { text: "About", link: "/about" },
       { text: "Contact", link: "/contact" },
@@ -20,7 +44,6 @@ export default {
       { text: "Configs", link: "/configs" },
       { text: "Changelog", link: "/changelog" },
     ],
-    // Social Icons
     socialLinks: [
       { icon: "discord", link: "https://discord.gg/gRBk8rDsc" },
       { icon: "x", link: "https://x.com/BreezellCode" },
@@ -32,7 +55,6 @@ export default {
         ariaLabel: "Official website",
       },
     ],
-    // Sidebar
     sidebar: [
       {
         text: "Get Started",
@@ -43,21 +65,19 @@ export default {
         ],
       },
     ],
-    // you can disable the previous and next page here
     docFooter: {
       prev: true,
       next: true,
     },
     editLink: {
-      pattern: 'https://github.com/Evavic44/adocs/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
+      pattern: "https://github.com/Evavic44/adocs/edit/main/docs/:path",
+      text: "Edit this page on GitHub",
     },
     markdown: {
       theme: "material-palenight",
       lineNumbers: true,
     },
-    // Mobile Config only
-    returnToTopLabel: 'Go to Top',
-    sidebarMenuLabel: 'Menu',
+    returnToTopLabel: "Go to Top",
+    sidebarMenuLabel: "Menu",
   },
-};
+});
