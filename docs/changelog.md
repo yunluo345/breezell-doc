@@ -5,6 +5,28 @@ next: false
 
 # Changelog
 
+## 1.1.9 · 2026-06-26
+
+### New Models
+
+- Added support for multiple new large language models, as well as AI image and video generation models, giving you more model options.
+
+### New Features
+
+- Agents now support Deep Research, making complex questions easier to explore in greater depth.
+- The chat sidebar now supports one-click jump to the latest message and one-click message copying.
+- Service provider management now supports a list layout, and the MCP Market interface has been refreshed.
+
+### Experience Improvements
+
+- Refined light/dark themes, terminal UI, and multiple interface details for a cleaner visual experience.
+
+### Performance & Stability
+
+- Upgraded the underlying runtime engine for smoother startup and operation.
+- Agents are now smarter and more stable, reducing repetitive and ineffective actions.
+- Fixed issues related to login, terminal, remote connections, and multiple interface areas.
+
 ## 1.1.8 · Bugfix · 2026-06-09
 
 - Added new validation for intensity adjustment
