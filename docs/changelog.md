@@ -5,7 +5,7 @@ next: false
 
 # Changelog
 
-## Breezell v1.2.1 Release Notes
+## 1.2.1 · 2026-07-08
 
 We are excited to announce the release of Breezell v1.2.1. This update brings a wide range of improvements across source control, background commands, terminal workflows, Skills, model support, image task handling, UI polish, and long-running AI interactions. It also includes many stability fixes for streaming output, editor state synchronization, session persistence, multi-window behavior, and authentication.
 
@@ -40,6 +40,47 @@ We are excited to announce the release of Breezell v1.2.1. This update brings a 
 - Optimized prompt caching and tool-calling strategies to reduce repeated overhead and improve response consistency.
 - Improved streaming rendering and UI update logic, making long conversations and high-load outputs smoother.
 - Optimized the LLM request timeout mechanism so long generation tasks are less likely to be interrupted incorrectly while progress is still being made.
+
+## 1.2.0 · 2026-07-06
+
+Breezell v1.2.0 introduces new AI tools, smarter agent workflows, interface upgrades, stability fixes, and performance improvements across long conversations, tool execution, terminal output, memory isolation, and remote development.
+
+### AI Tools and Intelligent Capabilities
+
+- Added the new **Agent Research** tool, with support for real-time progress tracking and result display.
+- Added **batch script execution** in Code Mode as the first phase of multi-step automation support.
+- Added a unified browser tool entry point, consolidating previously separate browser actions into a simpler workflow.
+
+### Conversation and Interface
+
+- Added a **Message Rail** to the chat area, making it easier to browse and jump between conversation messages.
+- Added quick access cards for **Super Memory** and **Code Review** on the chat home page.
+- Added a quick toggle panel for **MCP servers** in the input area, allowing users to enable or disable MCP without opening Settings.
+- Introduced a new brand identity, with unified visual updates across the launch page, welcome page, and Teams Mode.
+- Redesigned the provider management interface in Settings, now supporting list-based browsing and detailed drill-down views.
+- Added custom theme accent colors, available in both light and dark mode.
+- Upgraded image settings to v2, with support for polling and tracking asynchronous video tasks.
+- Added health check reports for OpenAI-compatible providers, making it easier to diagnose connection and configuration issues.
+
+### Stability
+
+- Fixed lag when loading long conversation histories and slow responses when pasting large blocks of content.
+- Fixed occasional UI freezes during AI streaming output, especially when the terminal produced large amounts of output.
+- Fixed cases where the **Keep All / Undo All** action bar could disappear unexpectedly.
+- Fixed settings being overwritten when multiple windows were open at the same time.
+- Fixed issues where **Super Memory** could not be used properly in certain modes.
+- Fixed incorrect timeout interruptions during AI generation, so slow but healthy generations are no longer stopped too early.
+- Fixed refresh token failures that could cause users to log in repeatedly.
+- Fixed tool execution results losing their correct pairing when users interrupted with a new message.
+- Fixed silent compression of tool results causing the AI to rerun the same task repeatedly.
+- Fixed inaccurate terminal exit code display and cases where terminal output could not be fully restored.
+- Fixed Remote SSH connections losing hostname casing and port information.
+
+### Performance and Experience Improvements
+
+- Improved overall response speed by streamlining the AI tool surface and reducing system overhead for each conversation turn.
+- Optimized search and reading strategies with a “locate first, then read in windows” approach, reducing unnecessary full-document reads.
+- Added workspace-level memory isolation, preventing memory recall from different projects from interfering with each other.
 
 ## 1.1.9 · 2026-06-26
 
