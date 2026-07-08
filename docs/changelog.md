@@ -5,6 +5,42 @@ next: false
 
 # Changelog
 
+## Breezell v1.2.1 Release Notes
+
+We are excited to announce the release of Breezell v1.2.1. This update brings a wide range of improvements across source control, background commands, terminal workflows, Skills, model support, image task handling, UI polish, and long-running AI interactions. It also includes many stability fixes for streaming output, editor state synchronization, session persistence, multi-window behavior, and authentication.
+
+### New
+
+- The Source Control view now supports expandable commit details and browsing of related files, making change tracking clearer and more intuitive.
+- Background command and terminal collaboration has been improved, with support for multi-task status display and clearer feedback when users manually interrupt a task.
+- The Skills panel now works together with the Superpowers master toggle, creating a more unified configuration path.
+- The conversation home page now includes quick access shortcuts for frequently used capabilities, reducing the time needed to reach common features.
+- Brand visuals and interface identifiers have been updated across startup screens and Team Mode.
+- Expanded support and parameter adaptation for the latest generation of mainstream AI models.
+- Image settings have been upgraded, including status tracking for asynchronous video-style tasks.
+- Added the first phase of batch script execution, designed for multi-step automation scenarios.
+
+### Fixes
+
+- Fixed issues where AI conversation streaming could become stuck, produce abnormal formatting, or fail to recover smoothly after long-running tasks were interrupted.
+- Fixed repeated application of code editing tools, abnormal navigation behavior, and editor state desynchronization after rejecting changes.
+- Fixed delayed refresh issues in context usage statistics, progress rings, and hint messages.
+- Fixed version update notifications getting stuck and several untranslated text strings.
+- Fixed usability and display issues across Super Memory, code review, and related tool flows.
+- Fixed session persistence issues and reduced lag in the history list when handling large threads or large pasted content.
+- Fixed overlay panels such as MCP and Skills being blocked during conversations.
+- Fixed occasional stream interruptions during long research-style outputs.
+- Fixed task completion reminders not triggering when the window was out of focus.
+- Fixed settings being overwritten across multiple windows and batch operation bars disappearing unexpectedly.
+- Fixed authentication sessions requiring users to log in again or showing inconsistent states in certain scenarios.
+
+### Improvements
+
+- Upgraded the core runtime and AI dependencies to improve overall stability and compatibility.
+- Optimized prompt caching and tool-calling strategies to reduce repeated overhead and improve response consistency.
+- Improved streaming rendering and UI update logic, making long conversations and high-load outputs smoother.
+- Optimized the LLM request timeout mechanism so long generation tasks are less likely to be interrupted incorrectly while progress is still being made.
+
 ## 1.1.9 · 2026-06-26
 
 ### New Models
