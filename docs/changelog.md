@@ -5,6 +5,67 @@ next: false
 
 # Changelog
 
+## 1.2.4 · 2026-07-20
+
+### New Features
+
+#### Models and Providers
+
+- Integrated **Grok 4.5**, including adjustable inference strength and a Fast channel; **Claude Sonnet 5** is available with both **200K** and **1M** context options.
+- Added **Kimi K3** through both Moonshot API and Kimi Code channels, with **256K** and **1M** context options, plus full support for **Kimi K2.7 Code**.
+- Added the **StreamLake** provider with Kuaishou's complete KAT-Coder model family, built-in Coding Plan presets, and pay-as-you-go endpoint presets.
+- Added OAuth sign-in for Grok accounts.
+- Redesigned Fast channels from a global toggle into independent **provider + model** configuration, so Copilot, Codex, Claude, and other providers use their official channel semantics.
+- OpenAI-compatible configurations can now be pinned so frequently used channels remain at the top.
+- Added support for time-limited model trials and discounts, with promotion badges in the model selector.
+- Updated the model directory with current flagship models, including Claude Fable 5, Claude Sonnet 5, Nemotron 3 Ultra, DeepSeek V4, GLM-5.2, and MiniMax M3, while removing outdated entries.
+
+#### Usage, Appearance, and Interface
+
+- Upgraded the Usage Center with multilingual usage and reset-time display for Codex, Kimi, and Copilot in Simplified Chinese, Traditional Chinese, Korean, and Russian. Settings and chat-sidebar data now synchronize in real time, and Copilot usage shows Chat, Completions, and Premium Requests separately.
+- Welcome-page titles can now be customized globally or per mode, including font size and font weight. Added the **Elegant** style for quick-access shortcuts.
+- Added Japanese, Spanish, and Brazilian Portuguese interface languages.
+- Redesigned the notification center to follow the product language, refreshed the Super Memory card layout, and softened the chat input and message bubble visuals.
+
+#### Browser, Chat, and Workspace
+
+- The built-in browser now supports muting all tabs or individual tabs, with real-time synchronization between its panel tab list and the browser.
+- Chat messages can now include up to **10 images**; images are automatically resized and included in context accounting. Added turn-duration display, one-click rollback within messages, and options to open links in the external or built-in browser.
+- The chat commit dialog now supports multi-repository workspaces: generate commit information per repository, submit independently, initialize repositories directly from the dialog, and preserve commit/push progress across restarts.
+- Added project grouping in the resource manager and more timely collaboration-status updates across multiple windows.
+- Added persistent memory, which automatically distills conversation history into reusable experience with multilingual deduplication.
+
+#### Diagnostics and Productivity
+
+- Added cache visualization with per-turn cache notifications and workspace daily reports comparing today and yesterday, including session/workspace filters, estimated savings, and cache-miss analysis.
+- Added interactive design cards that can generate HTML design drafts directly in chat and apply them after confirmation.
+- Provider network settings now support one-click parallel speed tests across direct connection, system proxy, global proxy, and custom routes. Recommended routes are labeled automatically, and routing badges update in real time on the Settings page.
+- Upgraded the PDF viewer core with a new toolbar. Attachments are metered by page, automatically hidden when context is constrained, and limited by each model's volume and page limits.
+
+### Improvements
+
+- Redesigned the backend command experience: status-bar entries stay visible until commands truly finish, while concurrent commands collapse into an expandable summary.
+- Expanded advanced-feature authorization and compatibility for mainstream extensions such as Python and Pylance, and improved remote-development compatibility.
+- Improved installation and update reliability on domestic networks.
+- Made automatic context compression smarter by triggering it dynamically according to available context, reducing unnecessary compression.
+- Built-in skills are now enabled on demand and default to lightweight mode.
+- Agents now complete multi-stage plans without pausing mid-process for confirmation, with more restrained responses focused on outcomes.
+- Deeply optimized the request pipeline to reduce the cost of long conversations.
+- Redesigned error prompts with quieter banners, detail drawers, and clearer mixed Chinese-English rendering.
+- Restored the title-bar layout toggle, reorganized quick access on empty chat pages, and prevented provider icons from triggering system alerts.
+
+### Fixes
+
+- Resolved lag and abnormal memory usage in long conversations, significantly accelerating historical-session opening and improving extended-response smoothness.
+- Disabled or offline MCP servers no longer expose tools to models, preventing accidental calls; MCP connections also remain stable after toggling, and configuration read errors no longer clear saved settings.
+- Fixed incorrect bolding of selected Settings navigation icons, crashes in certain Linux environments, and several other interface issues.
+- Fixed past-session loading issues that could cause interface crashes or unbounded storage growth.
+- Fixed false-positive “context compressed” states: real compression is now explicitly visible, and long-conversation understanding drift and cross-session memory interference have been addressed.
+- Deleting an active model or channel configuration now automatically selects an available option instead of leaving selection boxes blank.
+- Switching between Plan and Analysis tabs now preserves state without reloading content.
+- Fixed occasional white screens in the drawing panel, stale entries after background command termination, Settings-page scrollbar issues, and other minor details.
+- Improved parameter compatibility across models, including instruction editing, streaming interruption detection, thinking-budget limits, and document alignment.
+
 ## 1.2.1 · 2026-07-08
 
 We are excited to announce the release of Breezell v1.2.1. This update brings a wide range of improvements across source control, background commands, terminal workflows, Skills, model support, image task handling, UI polish, and long-running AI interactions. It also includes many stability fixes for streaming output, editor state synchronization, session persistence, multi-window behavior, and authentication.
