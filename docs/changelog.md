@@ -5,6 +5,47 @@ next: false
 
 # Changelog
 
+## 1.2.5 · 2026-07-22
+
+### Added
+
+- Added provider and model integrations for **Tencent Hunyuan HY3** and **TokenHub**.
+- Added **Gemini 3.6 Flash** and **Gemini 3.5 Flash-Lite**, both now officially generally available.
+- Added project badges to chat histories in multi-root workspaces.
+- Expanded capability support for compatible provider channels.
+- Added interface translations for Japanese, Spanish, Portuguese, and additional languages.
+- Updated the OpenAI protocol guidance with two clearer recommendations:
+  - OpenAI-compatible endpoints use the OpenAI protocol by default.
+  - The Responses API is recommended for GPT models.
+
+### Fixes
+
+- Fixed an issue where newly created todos remained stuck at **Waiting for Confirmation**.
+- Fixed multi-stage plans requiring users to manually click **Continue** after every batch.
+- Fixed the duration, Review, Git, and tool action bars remaining highlighted and clickable after reverting to a checkpoint.
+- Fixed entitlement gating in the drawing panel not synchronizing correctly, and improved unclear restriction messages.
+- Fixed blank canvases not receiving a default node when opened for the first time.
+- Fixed Chat mode sessions leaking or becoming mixed across multiple windows.
+- Fixed model selection falling back to an unavailable model after the currently selected model was deleted.
+- Fixed single-file staging not working correctly in Chat Git.
+- Fixed commit and refresh issues in multi-repository workspaces.
+- Fixed chat histories being lost after adding a folder to the workspace.
+- Fixed missing Activity Bar icons in WSL and SSH environments.
+- Fixed project list flickering in the Explorer.
+- Fixed concurrent Git status checks in the repository view overloading the extension host.
+- Fixed malformed `****` output disrupting OpenAI reasoning streams.
+- Fixed the styling of the close button on edit bubbles.
+
+### Improvements
+
+- Simplified the startup cards on the Welcome page with dashed tiles and unified Code Review icons.
+- Updated secondary Super Memory text to use italic styling.
+- Consolidated provider cards on the Settings page.
+- Improved the title layout of network configuration dialogs.
+- Improved localization for the empty model selector and made it possible to open Settings directly from the selector.
+- Ensured the background directory’s `supportsFast` capability is correctly passed through the request pipeline.
+- Corrected pricing information for **Qwen 3.7**.
+
 ## 1.2.4 · 2026-07-20
 
 ### New Features
