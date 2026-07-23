@@ -50,15 +50,11 @@ The pointer highlights the file upload control.
 
 Click this control to attach local files to the current message before sending it to Breezell. Uploaded files become part of the request context, so Breezell can inspect or reference them while answering.
 
-## Advanced Exploration
+## ~~Advanced Exploration~~
 
-The pointer highlights the **Advanced Exploration** control. This feature starts a deeper research workflow for questions that require active learning, broader investigation, and more thorough exploration.
+> **Deprecated after version 1.2.5.** The dedicated Advanced Exploration control is no longer available. When a request requires deeper research, Breezell automatically invokes the related capabilities for active learning, broader investigation, and more thorough exploration.
 
 ![Advanced Exploration control](/dialog-box/input-tools-expanded.png)
-
-Advanced Exploration means advanced exploration or deep exploration. It works like a scholar that actively learns knowledge, investigates ideas, and explores research questions in depth.
-
-> “A true scholar should actively learn knowledge, explore, and conduct research. It works like a scholar.”
 
 ## Breezell Browser
 

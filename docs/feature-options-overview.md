@@ -68,11 +68,13 @@ When this option is enabled, Breezell can review the current change set and crea
 | --- | --- |
 | Enable Superpowers Skills | Allow AI to use structured development workflows such as brainstorming, planning, TDD, and code review. Full content is loaded on demand. |
 
-### Agent Advanced Exploration
+### ~~Agent Advanced Exploration~~
+
+> **Deprecated after version 1.2.5.** This option has been removed. When a request requires deep multi-source research, Breezell automatically invokes the related capabilities and summarizes the results into a cited research report.
 
 | Feature | Description |
 | --- | --- |
-| Enable Advanced Exploration | Enable deep multi-source research. The agent can perform multiple rounds of search and summarize the results into a cited research report. |
+| ~~Enable Advanced Exploration~~ | Deprecated after version 1.2.5; the related research capabilities are invoked automatically when needed. |
 
 ### Entanglement Mode Panel
 
