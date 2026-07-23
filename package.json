@@ -7,7 +7,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "deploy": "npm run docs:build && wrangler deploy",
+    "preview": "npm run docs:build && wrangler dev"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,8 @@
     "viewerjs": "^1.11.7",
     "vitepress": "^1.0.0-rc.45",
     "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "wrangler": "^4.113.0"
   }
 }
